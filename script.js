@@ -17,7 +17,6 @@ window.onscroll = () => {
     });
 }
 
-// Get all modal openers
 document.querySelectorAll('.open-modal').forEach(item => {
     item.addEventListener('click', function(e) {
         e.preventDefault();
@@ -26,21 +25,18 @@ document.querySelectorAll('.open-modal').forEach(item => {
     });
 });
 
-// Get all close buttons
 document.querySelectorAll('.close').forEach(item => {
     item.addEventListener('click', function() {
         this.closest('.modal').style.display = "none";
     });
 });
 
-// Close modal if clicked outside the content
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
 };
 
-// Get all modal openers
 document.querySelectorAll('.open-modal').forEach(item => {
     item.addEventListener('click', function(e) {
         e.preventDefault();
@@ -49,29 +45,25 @@ document.querySelectorAll('.open-modal').forEach(item => {
     });
 });
 
-// Get all close buttons
 document.querySelectorAll('.close').forEach(item => {
     item.addEventListener('click', function() {
         this.closest('.modal').style.display = "none";
     });
 });
 
-// Close modal if clicked outside the content
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
 };
 
-// Function to open a modal
 function openModal(modalId) {
     document.querySelectorAll('.modal').forEach(modal => {
-        modal.style.display = "none"; // Close all modals
+        modal.style.display = "none"; 
     });
-    document.getElementById(modalId).style.display = "block"; // Open the desired modal
+    document.getElementById(modalId).style.display = "block"; 
 }
 
-// Event listeners for navigation buttons
 document.querySelectorAll('.nav-button.next').forEach(button => {
     button.addEventListener('click', function() {
         const nextModal = this.getAttribute('data-next');
@@ -86,7 +78,6 @@ document.querySelectorAll('.nav-button.prev').forEach(button => {
     });
 });
 
-// Existing event listeners for modal opening and closing
 document.querySelectorAll('.open-modal').forEach(item => {
     item.addEventListener('click', function(e) {
         e.preventDefault();
@@ -101,7 +92,6 @@ document.querySelectorAll('.close').forEach(item => {
     });
 });
 
-// Close modal if clicked outside the content
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
